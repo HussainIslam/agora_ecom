@@ -1,10 +1,11 @@
 import uuid
+import datetime
 from django.contrib.auth.models import AbstractUser
 from django.db import models
 
 
 
-class Address:
+class Address(models.Model):
     address_id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
     street_address = models.CharField(max_length=100)
     city = models.CharField(max_length=20)
@@ -13,4 +14,16 @@ class Address:
     country = models.CharField(max_length=20)
 
 class CustomUser(AbstractUser):
-    pass
+    billing_address = models.ForeignKey(Address, on_delete=models.RESTRICT, related_name='billing_address')
+    shipping_address = models.ForeignKey(Address, on_delete=models.RESTRICT, related_name='shipping_address')
+    date_of_birth = models.DateField(auto_now_add=datetime.date.today(), editable=True, blank=False)
+    phone = models.CharField(max_length=20)
+    email = models.EmailField()
+    GENDER_CHOICES = [
+        ('Male', 'Male'),
+        ('Female', 'Female'),
+        ("Don't want to disclose", "Don't want to disclose")
+    ]
+    gender = models.CharField(max_length=25, choices=GENDER_CHOICES, default="Don't want to disclose")
+    registered_on = models.DateTimeField(auto_now_add=True)
+    last_modified = models.DateTimeField(auto_now=True)
