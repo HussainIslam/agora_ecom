@@ -41,6 +41,15 @@ INSTALLED_APPS = [
     # internal apps
     'accounts.apps.AccountsConfig',
     'pages.apps.PagesConfig',
+
+    # third-party packages
+    'rest_framework',
+    'rest_framework.authtoken',
+    'rest_auth',
+    'django.contrib.sites',
+    'allauth',
+    'allauth.account',
+    'rest_auth.registration',
 ]
 
 MIDDLEWARE = [
