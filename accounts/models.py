@@ -1,7 +1,10 @@
 import uuid
 import datetime
 from django.contrib.auth.models import AbstractUser
+from django.utils.translation import ugettext_lazy as _
 from django.db import models
+
+from .managers import CustomUserManager
 
 
 
@@ -18,7 +21,7 @@ class CustomUser(AbstractUser):
     shipping_address = models.ForeignKey(Address, on_delete=models.RESTRICT, related_name='shipping_address')
     date_of_birth = models.DateField(auto_now_add=datetime.date.today(), editable=True, blank=False)
     phone = models.CharField(max_length=20)
-    email = models.EmailField()
+    email = models.EmailField(_('email address'), unique=True)
     GENDER_CHOICES = [
         ('Male', 'Male'),
         ('Female', 'Female'),
@@ -27,3 +30,10 @@ class CustomUser(AbstractUser):
     gender = models.CharField(max_length=25, choices=GENDER_CHOICES, default="Don't want to disclose")
     registered_on = models.DateTimeField(auto_now_add=True)
     last_modified = models.DateTimeField(auto_now=True)
+
+    USERNAME_FIELD = 'email'
+    REQUIRED_FIELDS = []
+    objects = CustomUserManager()
+
+    def __str__(self):
+        return self.email
