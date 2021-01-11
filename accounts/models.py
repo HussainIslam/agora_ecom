@@ -17,17 +17,17 @@ class Address(models.Model):
     country = models.CharField(max_length=20)
 
 class CustomUser(AbstractUser):
-    billing_address = models.ForeignKey(Address, on_delete=models.RESTRICT, related_name='billing_address')
-    shipping_address = models.ForeignKey(Address, on_delete=models.RESTRICT, related_name='shipping_address')
+    billing_address = models.ForeignKey(Address, on_delete=models.RESTRICT, blank=True, null=True, related_name='billing_address')
+    shipping_address = models.ForeignKey(Address, on_delete=models.RESTRICT, blank=True, null=True, related_name='shipping_address')
     date_of_birth = models.DateField(auto_now_add=datetime.date.today(), editable=True, blank=False)
-    phone = models.CharField(max_length=20)
+    phone = models.CharField(max_length=20, blank=True, null=True)
     email = models.EmailField(_('email address'), unique=True)
     GENDER_CHOICES = [
         ('Male', 'Male'),
         ('Female', 'Female'),
         ("Don't want to disclose", "Don't want to disclose")
     ]
-    gender = models.CharField(max_length=25, choices=GENDER_CHOICES, default="Don't want to disclose")
+    gender = models.CharField(max_length=25, choices=GENDER_CHOICES, default="Don't want to disclose", blank=True, null=True)
     registered_on = models.DateTimeField(auto_now_add=True)
     last_modified = models.DateTimeField(auto_now=True)
 
