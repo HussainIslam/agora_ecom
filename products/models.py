@@ -1,7 +1,7 @@
 import uuid
 from django.db import models
 
-class Products(models.Model):
+class Product(models.Model):
     product_id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
     product_name = models.CharField(max_length=200, blank=False, null=False)
     description = models.TextField()
@@ -18,3 +18,6 @@ class Products(models.Model):
     ranking = models.IntegerField(default=0)
     is_taxable = models.BooleanField(default=True)
     tax_rate = models.FloatField(default=0.13)
+
+    def __str__(self):
+        return self.product_name
