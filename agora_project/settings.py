@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     # internal apps
     'accounts.apps.AccountsConfig',
     'pages.apps.PagesConfig',
+    'products.apps.ProductsConfig',
 
     # third-party packages
     'rest_framework',
