@@ -21,3 +21,11 @@ class Product(models.Model):
 
     def __str__(self):
         return self.product_name
+
+class P_Category(models.Model):
+    category_id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
+    category_name = models.CharField(max_length=50)
+    category_description = models.TextField()
+
+    def __str__(self):
+        return self.category_name
