@@ -26,6 +26,13 @@ class P_Category(models.Model):
     category_id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
     category_name = models.CharField(max_length=50)
     category_description = models.TextField()
+    product = models.ManyToManyField(Product, related_name='p_category')
 
     def __str__(self):
         return self.category_name
+    
+class P_Image(models.Model):
+    image_id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
+    image_url = models.URLField(max_length=400)
+    product = models.ForeignKey(Product, on_delete=models.CASCADE)
+
