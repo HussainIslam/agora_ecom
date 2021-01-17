@@ -9,3 +9,7 @@ class ShipperSerializer(serializers.ModelSerializer):
 class OrderSerializer(serializers.ModelSerializer):
     model = Order
     fields = '__all__'
+
+class OrderlineSerializer(serializers.ModelSerializer):
+    model = Orderline
+    fields = '__all__'
