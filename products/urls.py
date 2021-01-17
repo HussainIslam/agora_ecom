@@ -12,4 +12,6 @@ urlpatterns = [
     path('colors/<uuid:pk>/', views.PColorDetail.as_view(), name='color'),
     path('sizes/', views.PSizeList.as_view(), name='sizes'),
     path('sizes/<uuid:pk>/', views.PSizeDetail.as_view(), name='size'),
+    path('images/', views.PImageList.as_view(), name='images'),
+    path('images/<uuid:pk>/', views.PImageDetail.as_view(), name='image'),
 ]
