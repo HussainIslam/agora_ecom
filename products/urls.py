@@ -10,4 +10,6 @@ urlpatterns = [
     path('brands/<uuid:pk>/', views.PBrandDetail.as_view(), name='brand'),
     path('colors/', views.PColorList.as_view(), name='colors'),
     path('colors/<uuid:pk>/', views.PColorDetail.as_view(), name='color'),
+    path('sizes/', views.PSizeList.as_view(), name='sizes'),
+    path('sizes/<uuid:pk>/', views.PSizeDetail.as_view(), name='size'),
 ]
