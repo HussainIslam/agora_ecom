@@ -38,3 +38,9 @@ class PSizeSerializer(serializers.ModelSerializer):
     class Meta:
         model = P_Size
         fields = '__all__'
+
+class PImageSerializer(serializers.ModelSerializer):
+
+    class Meta:
+        model = P_Image
+        fields = '__all__'
