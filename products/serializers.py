@@ -26,3 +26,9 @@ class PBrandSerializer(serializers.ModelSerializer):
     class Meta:
         model = P_Brand
         fields = '__all__'
+
+class PColorSerializer(serializers.ModelSerializer):
+
+    class Meta:
+        model = P_Color
+        fields = '__all__'
