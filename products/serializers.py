@@ -32,3 +32,9 @@ class PColorSerializer(serializers.ModelSerializer):
     class Meta:
         model = P_Color
         fields = '__all__'
+
+class PSizeSerializer(serializers.ModelSerializer):
+
+    class Meta:
+        model = P_Size
+        fields = '__all__'
