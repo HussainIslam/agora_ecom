@@ -11,3 +11,10 @@ class ShipperDetail(generics.RetrieveUpdateDestroyAPIView):
     queryset = Shipper
     serializer_class = ShipperSerializer
 
+class OrderList(generics.ListCreateAPIView):
+    queryset = Order
+    serializer_class = OrderSerializer
+
+class OrderDetail(generics.RetrieveUpdateDestroyAPIView):
+    queryset = Order
+    serializer_class = OrderSerializer
