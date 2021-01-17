@@ -18,3 +18,11 @@ class OrderList(generics.ListCreateAPIView):
 class OrderDetail(generics.RetrieveUpdateDestroyAPIView):
     queryset = Order
     serializer_class = OrderSerializer
+
+class OrderlineList(generics.ListCreateAPIView):
+    queryset = Orderline
+    serializer_class = OrderlineSerializer
+
+class OrderlineDetail(generics.RetrieveUpdateDestroyAPIView):
+    queryset = Orderline
+    serializer_class = OrderlineSerializer
