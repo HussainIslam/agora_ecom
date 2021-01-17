@@ -8,5 +8,6 @@ urlpatterns = [
     path('categories/<uuid:pk>/', views.PCategoryDetail.as_view(), name='category'),
     path('brands/', views.PBrandList.as_view(), name='brands'),
     path('brands/<uuid:pk>/', views.PBrandDetail.as_view(), name='brand'),
-
+    path('colors/', views.PColorList.as_view(), name='colors'),
+    path('colors/<uuid:pk>/', views.PColorDetail.as_view(), name='color'),
 ]
