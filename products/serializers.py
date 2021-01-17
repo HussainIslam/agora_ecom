@@ -20,3 +20,9 @@ class PCategorySerialier(serializers.ModelSerializer):
     class Meta:
         model = P_Category
         fields = '__all__'
+
+class PBrandSerializer(serializers.ModelSerializer):
+
+    class Meta:
+        model = P_Brand
+        fiedls = '__all__'
