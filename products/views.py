@@ -10,7 +10,8 @@ from .serializers import (  ProductSerializer,
                             PCategorySerialier,
                             PBrandSerializer,
                             PColorSerializer,
-                            PSizeSerializer,)
+                            PSizeSerializer,
+                            PImageSerializer)
 
 class ProductList(generics.ListCreateAPIView):
     queryset = Product.objects.all()
@@ -51,3 +52,11 @@ class PSizeList(generics.ListCreateAPIView):
 class PSizeDetail(generics.ListCreateAPIView):
     queryset = P_Size.objects.all()
     serializer_class = PSizeSerializer
+
+class PImageList(generics.ListCreateAPIView):
+    queryset = P_Image.objects.all()
+    serializer_class = PImageSerializer
+
+class PImageDetail(generics.RetrieveUpdateDestroyAPIView):
+    queryset = P_Image.objects.all()
+    serializer_class = PImageSerializer
