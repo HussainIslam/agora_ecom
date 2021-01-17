@@ -1,3 +1,13 @@
-from django.shortcuts import render
+from rest_framework import generics
 
-# Create your views here.
+from .models import Shipper, Order, Orderline
+from .serializers import ShipperSerializer, OrderSerializer, OrderlineSerializer
+
+class ShipperList(generics.ListCreateAPIView):
+    queryset = Shipper
+    serializer_class = ShipperSerializer
+
+class ShipperDetail(generics.RetrieveUpdateDestroyAPIView):
+    queryset = Shipper
+    serializer_class = ShipperSerializer
+
