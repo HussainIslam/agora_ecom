@@ -25,4 +25,4 @@ class PBrandSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = P_Brand
-        fiedls = '__all__'
+        fields = '__all__'

@@ -7,6 +7,6 @@ urlpatterns = [
     path('categories/', views.PCategoryList.as_view(), name='categories'),
     path('categories/<uuid:pk>/', views.PCategoryDetail.as_view(), name='category'),
     path('brands/', views.PBrandList.as_view(), name='brands'),
-    path('brands/<uuid:key>/', views.PBrandDetail.as_view(), name='brand'),
+    path('brands/<uuid:pk>/', views.PBrandDetail.as_view(), name='brand'),
 
 ]

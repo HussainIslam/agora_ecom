@@ -14,8 +14,8 @@ class P_Brand(models.Model):
     brand_id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
     brand_name = models.CharField(max_length=40)
     brand_description = models.TextField()
-    brand_logo = models.ImageField()
-    brand_website = models.URLField()
+    brand_logo = models.ImageField(blank=True, null=True)
+    brand_website = models.URLField(blank=True, null=True)
 
 
 class P_Color(models.Model):
