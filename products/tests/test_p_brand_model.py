@@ -1,3 +1,4 @@
+import uuid
 from django.test import TestCase
 
 from products.models import P_Brand
@@ -9,7 +10,7 @@ class BrandTestClass(TestCase):
         P_Brand.objects.create(
             brand_name="Test",
             brand_description="Test Description",
-            brand_website="http://example.com"
+            brand_website="http://example.com/"
         )
 
     def setUp(self):
@@ -31,3 +32,4 @@ class BrandTestClass(TestCase):
         website_label = self.brand._meta.get_field("brand_website").verbose_name
         self.assertEqual(website_label, 'brand website')
 
+    
