@@ -21,3 +21,4 @@ Client should be able to:
 - [ ] report a product
 
 ## Entity Relationship Diagram (ERD)
+![](/agora_erd.svg?raw=true)
