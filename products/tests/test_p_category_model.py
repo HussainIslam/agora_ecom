@@ -6,7 +6,7 @@ class CategoryModelTestClass(TestCase):
 
     @classmethod
     def setUpTestData(cls):
-        print("Testing Category Model")
+        print("Testing Category model")
         cls.category = P_Category.objects.create(
             category_name = "Men",
             category_description = "Everything a man needs",

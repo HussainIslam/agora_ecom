@@ -10,9 +10,10 @@ class BrandModelTestClass(TestCase):
         '''
         Setup Test Data for Brand's model
         '''
+        print("Testing Brand model")
         cls.brand = P_Brand.objects.create(
-            brand_name="Test",
-            brand_description="Test Description",
+            brand_name="Gucci",
+            brand_description="Luxary brand",
             brand_website="http://example.com/"
         )
 
