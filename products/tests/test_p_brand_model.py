@@ -3,10 +3,13 @@ from django.test import TestCase
 
 from products.models import P_Brand
 
-class BrandTestClass(TestCase):
+class BrandModelTestClass(TestCase):
 
     @classmethod
     def setUpTestData(cls):
+        '''
+        Setup Test Data for Brand's model
+        '''
         P_Brand.objects.create(
             brand_name="Test",
             brand_description="Test Description",
@@ -14,6 +17,7 @@ class BrandTestClass(TestCase):
         )
 
     def setUp(self):
+        
         self.brand = P_Brand.objects.get(brand_name="Test")
 
     def test_brand_name_label(self):

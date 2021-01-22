@@ -31,7 +31,7 @@ class CategoryModelTestClass(TestCase):
 
     def test_query_with_wrong_uuid(self):
         wrong_category = P_Category.objects.create(
-            category_name = "Woment",
+            category_name = "Women",
             category_description = "Everything a woman needs",
             parent_category = None
         )
