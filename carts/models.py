@@ -13,7 +13,7 @@ class Cart(models.Model):
     def __str__(self):
         return self.customer
 
-class CartItem(models.model):
+class CartItem(models.Model):
     cartitem_id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
     quantity = models.FloatField(default=0.00)
     added_time = models.DateTimeField(auto_now_add=True)
