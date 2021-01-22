@@ -12,6 +12,7 @@ django-rest-auth = "*"
 pillow = "*"
 django-rest-swagger = "*"
 drf-yasg = "*"
+coverage = "*"
 
 [dev-packages]
 
