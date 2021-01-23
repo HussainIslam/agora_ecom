@@ -16,6 +16,9 @@ class SizeModelTestClass(TestCase):
             value = "Large"
         )
     
+    def get_label(self, field_name):
+        return self.product._meta.get_field(field_name).verbose_name
+    
     def test_value_label(self):
         value_label = self.size._meta.get_field('value').verbose_name
         self.assertEqual(value_label, 'value')

@@ -13,6 +13,9 @@ class CategoryModelTestClass(TestCase):
             parent_category = None
         )
 
+    def get_label(self, field_name):
+        return self.product._meta.get_field(field_name).verbose_name
+
     def test_category_name_label(self):
         name_label = self.category._meta.get_field('category_name').verbose_name
         self.assertEqual(name_label, 'category name')

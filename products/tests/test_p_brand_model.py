@@ -17,32 +17,31 @@ class BrandModelTestClass(TestCase):
             brand_website="http://example.com/"
         )
 
+    def get_label(self, field_name):
+        return self.brand._meta.get_field(field_name).verbose_name
+
     def test_brand_name_label(self):
         '''
         Testing the label of brand_name
         '''
-        name_label = self.brand._meta.get_field("brand_name").verbose_name
-        self.assertEqual(name_label, 'brand name')
+        self.assertEqual(self.get_label('brand_name'), 'brand name')
 
     def test_brand_description_label(self):
         '''
         Testing the label of brand_description
         '''
-        description_label = self.brand._meta.get_field("brand_description").verbose_name
-        self.assertEqual(description_label, 'brand description')
+        self.assertEqual(self.get_label("brand_description"), 'brand description')
 
     def test_brand_logo_label(self):
         '''
         Testing the label of brand_logo
         '''
-        logo_label = self.brand._meta.get_field("brand_logo").verbose_name
-        self.assertEqual(logo_label, 'brand logo')
+        self.assertEqual(self.get_label("brand_logo"), 'brand logo')
 
     def test_brand_website_label(self):
         '''
         Testing the label of website
         '''
-        website_label = self.brand._meta.get_field("brand_website").verbose_name
-        self.assertEqual(website_label, 'brand website')
+        self.assertEqual(self.get_label("brand_website"), 'brand website')
 
     

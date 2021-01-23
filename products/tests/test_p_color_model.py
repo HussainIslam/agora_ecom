@@ -10,6 +10,9 @@ class ColorModelTestClass(TestCase):
             color_name = "white",
             color_code_hex = "FFFFFF"
         )
+
+    def get_label(self, field_name):
+        return self.product._meta.get_field(field_name).verbose_name
     
     def test_color_name_label(self):
         name_label = self.color._meta.get_field("color_name").verbose_name
