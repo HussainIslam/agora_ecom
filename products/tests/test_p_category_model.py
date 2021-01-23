@@ -6,7 +6,6 @@ class CategoryModelTestClass(TestCase):
 
     @classmethod
     def setUpTestData(cls):
-        print("Testing Category model")
         cls.category = P_Category.objects.create(
             category_name = "Men",
             category_description = "Everything a man needs",
@@ -14,19 +13,16 @@ class CategoryModelTestClass(TestCase):
         )
 
     def get_label(self, field_name):
-        return self.product._meta.get_field(field_name).verbose_name
+        return self.category._meta.get_field(field_name).verbose_name
 
     def test_category_name_label(self):
-        name_label = self.category._meta.get_field('category_name').verbose_name
-        self.assertEqual(name_label, 'category name')
+        self.assertEqual(self.get_label('category_name'), 'category name')
     
     def test_category_description_label(self):
-        description_label = self.category._meta.get_field('category_description').verbose_name
-        self.assertEqual(description_label, 'category description')
+        self.assertEqual(self.get_label('category_description'), 'category description')
 
     def test_parent_cateogory_label(self):
-        parent_cat_label = self.category._meta.get_field('parent_category').verbose_name
-        self.assertEqual(parent_cat_label, 'parent category')
+        self.assertEqual(self.get_label('parent_category'), 'parent category')
 
     def test_query_with_uuid(self):
         category_fetched = P_Category.objects.get(category_id = self.category.category_id)
