@@ -6,8 +6,9 @@ class ProductsTestClass(TestCase):
     
     @classmethod
     def setUpTestData(cls):
-        print("Testing Product model")
-
+        '''
+        Setup testing data for Product model
+        '''
         # Creating brand
         cls.brand = P_Brand.objects.create(
             brand_name="Gucci",
