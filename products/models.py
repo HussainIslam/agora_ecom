@@ -18,17 +18,26 @@ class P_Brand(models.Model):
     brand_logo = models.ImageField(blank=True, null=True)
     brand_website = models.URLField(blank=True, null=True)
 
+    def __str__(self):
+        return self.brand_name
+
 
 class P_Color(models.Model):
     color_id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
     color_name = models.CharField(max_length=20)
     color_code_hex = models.CharField(max_length=6, blank=True, null=True)
 
+    def __str__(self):
+        return self.color_name
+
 
 class P_Size(models.Model):
     size_id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
     category = models.ForeignKey(P_Category, on_delete=models.CASCADE, related_name='category_size')
     value = models.CharField(max_length=10)
+
+    def __str__(self):
+        return f'{self.value} of {str(self.category)}'
 
 class Product(models.Model):
     product_id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
@@ -60,3 +69,6 @@ class P_Image(models.Model):
     image_id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
     image = models.ImageField(blank=True, null=True)
     product = models.ForeignKey(Product, on_delete=models.CASCADE)
+
+    def __str__(self):
+        return f'Image for {str(self.product)}'
