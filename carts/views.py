@@ -10,3 +10,5 @@ class CartList(generics.ListCreateAPIView):
 class CartDetail(generics.RetrieveUpdateDestroyAPIView):
     queryset = Cart.objects.all()
     serializer_class = CartSerializer
+
+
