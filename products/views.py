@@ -49,7 +49,7 @@ class PSizeList(generics.ListCreateAPIView):
     queryset = P_Size.objects.all()
     serializer_class = PSizeSerializer
 
-class PSizeDetail(generics.ListCreateAPIView):
+class PSizeDetail(generics.RetrieveUpdateDestroyAPIView):
     queryset = P_Size.objects.all()
     serializer_class = PSizeSerializer
 
