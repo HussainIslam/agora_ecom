@@ -1,9 +1,103 @@
 [
     {
-        "models":"",
-        "pk":"",
+        "model":"products.product",
+        "pk":"b0162041-7ef2-4606-81f7-932408ca9939",
         "fields":{
-            
+            "product_name":"Formal Shirt for Men",
+            "description": "Formal shirt for men",
+            "note": "formal shirt for men that can be worn in offices",
+            "price": 50.23,
+            "unit_of_measurement": "unit",
+            "quantity_in_stock": 10,
+            "quantity_in_transit": 12,
+            "quantity_ordered": 4,
+            "quantity_per_unit": 1,
+            "weight": 300.2,
+            "dimension": "10in x 20in x 30in",
+            "rating": 4.3,
+            "ranking": 1,
+            "is_taxable": true,
+            "tax_rate": 0.13,
+            "colors": ["c3960a02-97ff-4146-8108-4835cdfd6545","90b5d7a3-4d8a-414b-9427-76cab82fcb9a"],
+            "sizes": ["6b10c89b-c39c-4d48-b11c-eee7b7ff7166", "f0a47fdf-9a26-4260-af7a-63e732b55b31", "e9f7b176-7690-467d-8a68-439687c075c2","abe83fa4-bfed-4c15-8748-106213a8912d","f670cc18-f444-4b81-9718-22aedf76485f" ],
+            "categories": ["e459f3fb-c900-4985-b0e4-5696c77a35e6"],
+            "brand": "d26b0c21-37c3-4726-a20a-348eedc23de5"
+        }
+    },
+    {
+        "model":"products.product",
+        "pk":"722c0fc5-3670-491b-924a-4a2b13212c05",
+        "fields":{
+            "product_name":"Tank Tops for ladies",
+            "description": "tank tops",
+            "note": "tank tops ofr ladies",
+            "price": 5.23,
+            "unit_of_measurement": "unit",
+            "quantity_in_stock": 10,
+            "quantity_in_transit": 12,
+            "quantity_ordered": 4,
+            "quantity_per_unit": 1,
+            "weight": 300.2,
+            "dimension": "10in x 20in x 30in",
+            "rating": 4.3,
+            "ranking": 1,
+            "is_taxable": true,
+            "tax_rate": 0.13,
+            "colors": ["bcd15694-b4a5-49de-b2ea-5c0a14a9800d"],
+            "sizes": [ "2ab1c91c-de21-4796-bb3b-875892edbd3f", "8cecbfaa-5d83-4240-b8d4-94b8d4524a9e", "ec422d17-46b1-4568-88cd-b6de73fc24e6", "5586f9b2-4a18-46d0-b130-f49053b2cab8", "82dbfe53-ffd3-4f28-81e6-f861aebe7b34"],
+            "categories": ["3085dd76-a4bb-4976-9f09-d6b05f27fab3"],
+            "brand": "d26b0c21-37c3-4726-a20a-348eedc23de5"
+        }
+    },
+    {
+        "model":"products.product",
+        "pk":"cde39a43-ffca-4a8c-b84f-7606750d142c",
+        "fields":{
+            "product_name":"Sports Shoe for men",
+            "description": "running shoes",
+            "note": null,
+            "price": 100,
+            "unit_of_measurement": "unit",
+            "quantity_in_stock": 10,
+            "quantity_in_transit": 12,
+            "quantity_ordered": 4,
+            "quantity_per_unit": 1,
+            "weight": 300.2,
+            "dimension": "10in x 20in x 30in",
+            "rating": 4.3,
+            "ranking": 1,
+            "is_taxable": true,
+            "tax_rate": 0.13,
+            "colors": ["bcd15694-b4a5-49de-b2ea-5c0a14a9800d","c3960a02-97ff-4146-8108-4835cdfd6545"],
+            "sizes": [ "91466234-5e2b-430b-af56-c451777af458", "7e31bb38-d265-487a-aba4-c1b8c1b309cd", "7cd28f22-f6c0-435f-8061-4bf3a6a96452",  "1413fc46-1fb8-40a8-8ca7-15d1ac541074"],
+            "categories": ["2f5a739e-d241-47f8-b617-e583a0c6205d"],
+            "brand":"a8486215-d69d-42f9-8c91-ff0305d2c780"
+        }
+    },
+    {
+        "model":"products.product",
+        "pk":"a0589258-3d2c-470b-8a33-5eb24e160827",
+        "fields":{
+            "product_name":"Running Shoes for women",
+            "description": "running shoes for women",
+            "note": "running shoes",
+            "price": 120,
+            "unit_of_measurement": "unit",
+            "quantity_in_stock": 10,
+            "quantity_in_transit": 12,
+            "quantity_ordered": 4,
+            "quantity_per_unit": 1,
+            "weight": 300.2,
+            "dimension": "10in x 20in x 30in",
+            "rating": 4.3,
+            "ranking": 1,
+            "is_taxable": true,
+            "tax_rate": 0.13,
+            "colors": ["08bd7728-3b10-474f-a562-a4b756ea2c97","90b5d7a3-4d8a-414b-9427-76cab82fcb9a","d0866fd3-5435-483b-9108-2b990f701bbc"],
+            "sizes": [ "89e208dc-ac11-47f8-ac11-26c529e0d919", "fbf13e53-12cb-4727-b241-30bd3b5e8e6e"],
+            "categories": ["2f5a739e-d241-47f8-b617-e583a0c6205d"],
+            "brand":"e7812dd9-e4a0-49c0-9700-eb5563e835f6"
         }
     }
+    
 ]
