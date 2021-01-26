@@ -18,7 +18,7 @@ RUN pip3 install pipenv
 RUN pipenv install --skip-lock --system --dev
 
 EXPOSE 8888
-RUN python manage.py makemigrations
+RUN python manage.py makemigrations 
 RUN python manage.py migrate
 RUN python manage.py collectstatic --noinput
 CMD gunicorn agora_project.wsgi:application --bind 0.0.0.0:$PORT
