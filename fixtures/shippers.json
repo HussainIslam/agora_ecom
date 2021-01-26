@@ -7,7 +7,7 @@
             "phone": "111-222-3333",
             "email": "info@dhl.com",
             "website": "http://dhl.com",
-            "shipper_addess": "19aec876-bb7e-43eb-a02f-d07e8c7b4ed5"
+            "shipper_address": "19aec876-bb7e-43eb-a02f-d07e8c7b4ed5"
         }
     },
     {
@@ -18,7 +18,7 @@
             "phone": "222-333-4444",
             "email": "info@ups.com",
             "website": "http://ups.com",
-            "shipper_addess": "d80e50af-7786-4094-a9fb-d149ebb6a254"
+            "shipper_address": "d80e50af-7786-4094-a9fb-d149ebb6a254"
         }
     }
 ]

@@ -11,7 +11,7 @@ class Shipper(models.Model):
     phone = models.CharField(max_length=15, blank = True, null = True)
     email = models.EmailField()
     website = models.URLField()
-    shipper_addess = models.ForeignKey(Address, on_delete=models.RESTRICT, related_name='shipper_address')
+    shipper_address = models.ForeignKey(Address, on_delete=models.RESTRICT, related_name='shipper_address')
 
 
 class Order(models.Model):
