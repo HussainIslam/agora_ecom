@@ -1,0 +1,32 @@
+[
+    {
+        "model":"accounts.CustomUser",
+        "pk":3,
+        "fields":{
+            "username": "user1",
+            "billing_address":"d80e50af-7786-4094-a9fb-d149ebb6a254",
+            "shipping_address":"51220ec8-6165-4da1-aad4-1e74ed9be776",
+            "date_of_birth":"2012-09-15",
+            "phone": "444-555-6666",
+            "email": "user1@gmail.com",
+            "gender":"Male",
+            "registered_on":"2012-09-15T22:17:44+00:00",
+            "last_modified": "2012-09-15T22:17:44+00:00"
+        }
+    },
+    {
+        "model":"accounts.CustomUser",
+        "pk":4,
+        "fields":{
+            "username": "user2",
+            "billing_address":"51220ec8-6165-4da1-aad4-1e74ed9be776",
+            "shipping_address":"d80e50af-7786-4094-a9fb-d149ebb6a254",
+            "date_of_birth":"2012-09-15",
+            "phone": "333-444-5555",
+            "email": "user2@gmail.com",
+            "gender":"Female",
+            "registered_on":"2012-09-15T22:17:44+00:00",
+            "last_modified": "2012-09-15T22:17:44+00:00"
+        }
+    }
+]
