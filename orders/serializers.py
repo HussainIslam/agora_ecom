@@ -19,7 +19,11 @@ class OrderSerializer(serializers.ModelSerializer):
         fields = '__all__'
 
 class OrderlineSerializer(serializers.ModelSerializer):
-    
+    order = serializers.HyperlinkedRelatedField(read_only=True, view_name='order')
+    product = serializers.HyperlinkedRelatedField(many=True, read_only=True, view_name='product')
+    color = serializers.HyperlinkedRelatedField(read_only=True, view_name='color')
+    size = serializers.HyperlinkedRelatedField(read_only=True, view_name='size')
+
     class Meta:
         model = Orderline
         fields = '__all__'
