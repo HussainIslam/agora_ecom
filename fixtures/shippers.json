@@ -1,0 +1,24 @@
+[
+    {
+        "model": "orders.shipper",
+        "pk": "8eee89c5-22d0-4c96-88a6-3ac9e6051c1d",
+        "fields": {
+            "shipper_name": "DHL",
+            "phone": "111-222-3333",
+            "email": "info@dhl.com",
+            "website": "http://dhl.com",
+            "shipper_addess": "19aec876-bb7e-43eb-a02f-d07e8c7b4ed5"
+        }
+    },
+    {
+        "model": "orders.shipper",
+        "pk": "bab2a23d-885e-492d-86d9-ad1ac15ad7b8",
+        "fields": {
+            "shipper_name": "UPS",
+            "phone": "222-333-4444",
+            "email": "info@ups.com",
+            "website": "http://ups.com",
+            "shipper_addess": "d80e50af-7786-4094-a9fb-d149ebb6a254"
+        }
+    }
+]
