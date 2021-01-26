@@ -4,9 +4,9 @@ from .models import Address
 from .serializers import AddressSerializer
 
 class AddressList(generics.ListCreateAPIView):
-    model = Address
+    queryset = Address.objects.all()
     serializer_class = AddressSerializer
 
 class AddressDetail(generics.RetrieveUpdateDestroyAPIView):
-    model = Address
+    queryset = Address.objects.all()
     serializer_class = AddressSerializer
