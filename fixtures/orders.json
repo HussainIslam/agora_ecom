@@ -1,0 +1,34 @@
+[
+    {
+        "model": "orders.order",
+        "pk": "da19d5f9-143d-4e60-9b36-79d5f8346b92",
+        "fields":{
+            "date": "2012-09-15T22:17:44+00:00",
+            "billing_address": "d80e50af-7786-4094-a9fb-d149ebb6a254",
+            "shipping_address": "d80e50af-7786-4094-a9fb-d149ebb6a254",
+            "bill_amount": 300,
+            "payment_method": "Visa",
+            "payment_date": "2012-09-15T22:17:44+00:00",
+            "payment_status": "Paid",
+            "payment_amount": 300,
+            "shipper": "8eee89c5-22d0-4c96-88a6-3ac9e6051c1d",
+            "tracking_number": "123"
+        }
+    },
+    {
+        "model": "orders.order",
+        "pk": "b684d921-41b4-4982-8ca9-6851a5653037",
+        "fields":{
+            "date": "2012-09-15T22:17:44+00:00",
+            "billing_address": "51220ec8-6165-4da1-aad4-1e74ed9be776",
+            "shipping_address": "19aec876-bb7e-43eb-a02f-d07e8c7b4ed5",
+            "bill_amount": 300,
+            "payment_method": "Visa",
+            "payment_date": "2012-09-15T22:17:44+00:00",
+            "payment_status": "Paid",
+            "payment_amount": 300,
+            "shipper": "bab2a23d-885e-492d-86d9-ad1ac15ad7b8",
+            "tracking_number": "123"
+        }
+    }
+]
