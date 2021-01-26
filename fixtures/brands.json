@@ -1,0 +1,62 @@
+[
+    {
+        "model":"products.p_brand",
+        "pk":"d26b0c21-37c3-4726-a20a-348eedc23de5",
+        "fields":{
+            "brand_name":"Gucci",
+            "brand_description":"Luxury fashion house based in Florence, Italy.",
+            "brand_logo":null,
+            "brand_website":"http://gucci.com"
+        }
+    },
+    {
+        "model":"products.p_brand",
+        "pk":"e7812dd9-e4a0-49c0-9700-eb5563e835f6",
+        "fields":{
+            "brand_name":"GAP",
+            "brand_description":"American worldwide clothing and accessories retailer.",
+            "brand_logo":null,
+            "brand_website":"http://gap.com"
+        }
+    },
+    {
+        "model":"products.p_brand",
+        "pk":"a8486215-d69d-42f9-8c91-ff0305d2c780",
+        "fields":{
+            "brand_name":"H&M",
+            "brand_description":"Swedish multinational clothing-retail company known for its fast-fashion clothing for men, women, teenagers and children",
+            "brand_logo":null,
+            "brand_website":"http://hmgroup.com"
+        }
+    },
+    {
+        "model":"products.p_brand",
+        "pk":"50f6fd88-2333-4140-8a5b-a2eab0d28590",
+        "fields":{
+            "brand_name":"Black+Decker",
+            "brand_description":" American manufacturer of power tools, accessories, hardware, home improvement products, home appliances and fastening systems",
+            "brand_logo":null,
+            "brand_website":"http://blackanddecker.com"
+        }
+    },
+    {
+        "model":"products.p_brand",
+        "pk":"713e943a-72e8-4b60-8d42-2b70369bb66c",
+        "fields":{
+            "brand_name":"Samsung",
+            "brand_description":"South Korean multinational conglomerate headquartered in Samsung Town, Seoul",
+            "brand_logo":null,
+            "brand_website":"http://samsung.com"
+        }
+    },
+    {
+        "model":"products.p_brand",
+        "pk":"1da9e3d2-39b1-44a7-8932-a98e6e1a3287",
+        "fields":{
+            "brand_name":"Apple",
+            "brand_description":"American multinational technology company headquartered in Cupertino, California, that designs, develops, and sells consumer electronics",
+            "brand_logo":null,
+            "brand_website":"http://apple.com"
+        }
+    }
+]

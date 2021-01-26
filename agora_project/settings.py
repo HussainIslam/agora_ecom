@@ -166,3 +166,9 @@ REST_AUTH_SERIALIZERS = {
 
 SITE_ID = 1
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+
+
+# Setting Fixtures directory
+FIXTURE_DIRS = [
+    'fixtures',
+]

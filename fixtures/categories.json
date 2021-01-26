@@ -1,0 +1,74 @@
+[
+    {
+        "model": "products.p_category",
+        "pk": "ee48acbe-6c80-4bf0-8b08-33cba091fb6f",
+        "fields":{
+            "category_name": "male",
+            "category_description": "all the male products",
+            "parent_category": null
+        }
+    },
+    {
+        "model": "products.p_category",
+        "pk": "7816db25-c2a9-4b5c-b91a-bf4726373a23",
+        "fields":{
+            "category_name": "female",
+            "category_description": "all the female products",
+            "parent_category": null
+        }
+    },
+    {
+        "model": "products.p_category",
+        "pk": "e459f3fb-c900-4985-b0e4-5696c77a35e6",
+        "fields":{
+            "category_name": "apparel",
+            "category_description": "all types of male apparel",
+            "parent_category": "ee48acbe-6c80-4bf0-8b08-33cba091fb6f"
+        }
+    },
+    {
+        "model": "products.p_category",
+        "pk": "8bc21854-28d8-4ea3-8658-31f67c0652e6",
+        "fields":{
+            "category_name": "shoes",
+            "category_description": "different types of shoes for men",
+            "parent_category": "ee48acbe-6c80-4bf0-8b08-33cba091fb6f"
+        }
+    },
+    {
+        "model": "products.p_category",
+        "pk": "6ca7e5b7-82d5-4c49-bfc6-677eccc3d4cf",
+        "fields":{
+            "category_name": "personal care",
+            "category_description": "all types of personal care products for men",
+            "parent_category": "ee48acbe-6c80-4bf0-8b08-33cba091fb6f"
+        }
+    },
+    {
+        "model": "products.p_category",
+        "pk": "3085dd76-a4bb-4976-9f09-d6b05f27fab3",
+        "fields":{
+            "category_name": "apparel",
+            "category_description": "all types of female apparel",
+            "parent_category": "7816db25-c2a9-4b5c-b91a-bf4726373a23"
+        }
+    },
+    {
+        "model": "products.p_category",
+        "pk": "2f5a739e-d241-47f8-b617-e583a0c6205d",
+        "fields":{
+            "category_name": "shoes",
+            "category_description": "shoes that a lady wants",
+            "parent_category": "7816db25-c2a9-4b5c-b91a-bf4726373a23"
+        }
+    },
+    {
+        "model": "products.p_category",
+        "pk": "f7e27805-81b9-4e49-aaa0-425943a2c7ea",
+        "fields":{
+            "category_name": "kids",
+            "category_description": "all types of kids products",
+            "parent_category": null
+        }
+    }
+]
