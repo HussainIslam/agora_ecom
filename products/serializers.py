@@ -10,6 +10,10 @@ from .models import (
 )
 
 class ProductSerializer(serializers.ModelSerializer):
+    colors = serializers.HyperlinkedRelatedField(many=True, read_only=True, view_name='color')
+    sizes = serializers.HyperlinkedRelatedField(many=True, read_only=True, view_name='size')
+    categories = serializers.HyperlinkedRelatedField(many=True, read_only=True, view_name='category')
+    brand = serializers.HyperlinkedRelatedField(read_only=True, view_name='brand')
 
     class Meta:
         model = Product
