@@ -3,7 +3,8 @@ from rest_framework import serializers
 from .models import Shipper, Order, Orderline
 
 class ShipperSerializer(serializers.ModelSerializer):
-    
+    shipper_addess = serializers.HyperlinkedRelatedField(read_only=True, view_name='address')
+
     class Meta:
         model = Shipper
         fields = '__all__'

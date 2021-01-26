@@ -10,6 +10,7 @@ class CartSerializer(serializers.ModelSerializer):
 
 
 class CartItemSerializer(serializers.ModelSerializer):
+    cart = serializers.HyperlinkedRelatedField(view_name='cart', read_only=True)
 
     class Meta:
         model = CartItem
