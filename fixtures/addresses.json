@@ -1,0 +1,35 @@
+[
+    {
+        "model": "accounts.address",
+        "pk": "d80e50af-7786-4094-a9fb-d149ebb6a254",
+        "fields":{
+            "street_address": "30 Denton Avenue",
+            "city": "Toronto",
+            "province": "ON",
+            "postal_code": "M1L 4P2",
+            "country": "Canada"
+        }
+    },
+    {
+        "model": "accounts.address",
+        "pk": "51220ec8-6165-4da1-aad4-1e74ed9be776",
+        "fields":{
+            "street_address": "10 Teesdale Place",
+            "city": "Scarborough",
+            "province": "ON",
+            "postal_code": "M1P 4E3",
+            "country": "Canada"
+        }
+    },
+    {
+        "model": "accounts.address",
+        "pk": "19aec876-bb7e-43eb-a02f-d07e8c7b4ed5",
+        "fields":{
+            "street_address": "167 Pharmacy Place",
+            "city": "Scarborough",
+            "province": "ON",
+            "postal_code": "M1L 2P2",
+            "country": "Canada"
+        }
+    }
+]
