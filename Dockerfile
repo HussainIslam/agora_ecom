@@ -22,3 +22,4 @@ RUN python manage.py makemigrations
 RUN python manage.py migrate
 RUN python manage.py collectstatic --noinput
 CMD gunicorn agora_project.wsgi:application --bind 0.0.0.0:$PORT
+RUN python manage.py loaddata fixtures/*.json
