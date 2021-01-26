@@ -23,13 +23,14 @@ schema_view = get_schema_view(
 )
 
 urlpatterns = [
-    path('', include('pages.urls')),
-    path('', include('products.urls')),
-    path('', include('orders.urls')),
-    path('carts/',include('carts.urls')),
-    path('admin/', admin.site.urls),
-    path('rest-auth/', include('rest_auth.urls')),
-    path('rest-auth/registration/', include('rest_auth.registration.urls')),
-    path('accounts-rest/registration/account-confirm-email/<str:key>/', confirm_email, name='account_confirm_email'),
-    path('swagger/', schema_view.with_ui('swagger', cache_timeout=0), name='schema-swagger-ui'),
+   path('', include('accounts.urls')),
+   path('', include('pages.urls')),
+   path('', include('products.urls')),
+   path('', include('orders.urls')),
+   path('carts/',include('carts.urls')),
+   path('admin/', admin.site.urls),
+   path('rest-auth/', include('rest_auth.urls')),
+   path('rest-auth/registration/', include('rest_auth.registration.urls')),
+   path('accounts-rest/registration/account-confirm-email/<str:key>/', confirm_email, name='account_confirm_email'),
+   path('swagger/', schema_view.with_ui('swagger', cache_timeout=0), name='schema-swagger-ui'),
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
