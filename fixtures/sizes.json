@@ -1,9 +1,194 @@
 [
     {
-        "models":"",
-        "pk":"",
+        "model":"products.p_size",
+        "pk":"6b10c89b-c39c-4d48-b11c-eee7b7ff7166",
         "fields":{
-            
+            "category": "e459f3fb-c900-4985-b0e4-5696c77a35e6",
+            "value": "small"
+        }
+    },
+    {
+        "model":"products.p_size",
+        "pk":"f0a47fdf-9a26-4260-af7a-63e732b55b31",
+        "fields":{
+            "category": "e459f3fb-c900-4985-b0e4-5696c77a35e6",
+            "value": "medium"
+        }
+    },
+    {
+        "model":"products.p_size",
+        "pk":"e9f7b176-7690-467d-8a68-439687c075c2",
+        "fields":{
+            "category": "e459f3fb-c900-4985-b0e4-5696c77a35e6",
+            "value": "large"
+        }
+    },
+    {
+        "model":"products.p_size",
+        "pk":"abe83fa4-bfed-4c15-8748-106213a8912d",
+        "fields":{
+            "category": "e459f3fb-c900-4985-b0e4-5696c77a35e6",
+            "value": "extra-large"
+        }
+    },
+    {
+        "model":"products.p_size",
+        "pk":"f670cc18-f444-4b81-9718-22aedf76485f",
+        "fields":{
+            "category": "e459f3fb-c900-4985-b0e4-5696c77a35e6",
+            "value": "extra-extra-large"
+        }
+    },
+    {
+        "model":"products.p_size",
+        "pk":"91466234-5e2b-430b-af56-c451777af458",
+        "fields":{
+            "category": "8bc21854-28d8-4ea3-8658-31f67c0652e6",
+            "value": "7"
+        }
+    },
+    {
+        "model":"products.p_size",
+        "pk":"b7a446d6-c39b-47f6-916f-d986c43e0be8",
+        "fields":{
+            "category": "8bc21854-28d8-4ea3-8658-31f67c0652e6",
+            "value": "8"
+        }
+    },
+    {
+        "model":"products.p_size",
+        "pk":"7e31bb38-d265-487a-aba4-c1b8c1b309cd",
+        "fields":{
+            "category": "8bc21854-28d8-4ea3-8658-31f67c0652e6",
+            "value": "9"
+        }
+    },
+    {
+        "model":"products.p_size",
+        "pk":"7cd28f22-f6c0-435f-8061-4bf3a6a96452",
+        "fields":{
+            "category": "8bc21854-28d8-4ea3-8658-31f67c0652e6",
+            "value": "10"
+        }
+    },
+    {
+        "model":"products.p_size",
+        "pk":"7dbf19da-f704-4166-98c9-e17d57b6c56e",
+        "fields":{
+            "category": "8bc21854-28d8-4ea3-8658-31f67c0652e6",
+            "value": "11"
+        }
+    },
+    {
+        "model":"products.p_size",
+        "pk":"0b9d6004-febc-4dfd-8451-cc964e60bfb0",
+        "fields":{
+            "category": "8bc21854-28d8-4ea3-8658-31f67c0652e6",
+            "value": "12"
+        }
+    },
+    {
+        "model":"products.p_size",
+        "pk":"1413fc46-1fb8-40a8-8ca7-15d1ac541074",
+        "fields":{
+            "category": "8bc21854-28d8-4ea3-8658-31f67c0652e6",
+            "value": "13"
+        }
+    },
+    {
+        "model":"products.p_size",
+        "pk":"2ab1c91c-de21-4796-bb3b-875892edbd3f",
+        "fields":{
+            "category": "3085dd76-a4bb-4976-9f09-d6b05f27fab3",
+            "value": "small"
+        }
+    },
+    {
+        "model":"products.p_size",
+        "pk":"8cecbfaa-5d83-4240-b8d4-94b8d4524a9e",
+        "fields":{
+            "category": "3085dd76-a4bb-4976-9f09-d6b05f27fab3",
+            "value": "medium"
+        }
+    },
+    {
+        "model":"products.p_size",
+        "pk":"ec422d17-46b1-4568-88cd-b6de73fc24e6",
+        "fields":{
+            "category": "3085dd76-a4bb-4976-9f09-d6b05f27fab3",
+            "value": "large"
+        }
+    },
+    {
+        "model":"products.p_size",
+        "pk":"5586f9b2-4a18-46d0-b130-f49053b2cab8",
+        "fields":{
+            "category": "3085dd76-a4bb-4976-9f09-d6b05f27fab3",
+            "value": "extra-large"
+        }
+    },
+    {
+        "model":"products.p_size",
+        "pk":"82dbfe53-ffd3-4f28-81e6-f861aebe7b34",
+        "fields":{
+            "category": "3085dd76-a4bb-4976-9f09-d6b05f27fab3",
+            "value": "extra-extra-large"
+        }
+    },
+    {
+        "model":"products.p_size",
+        "pk":"89e208dc-ac11-47f8-ac11-26c529e0d919",
+        "fields":{
+            "category": "2f5a739e-d241-47f8-b617-e583a0c6205d",
+            "value": "4"
+        }
+    },
+    {
+        "model":"products.p_size",
+        "pk":"f2bf280d-c6e2-4ac7-842e-46d961479f5e",
+        "fields":{
+            "category": "2f5a739e-d241-47f8-b617-e583a0c6205d",
+            "value": "5"
+        }
+    },
+    {
+        "model":"products.p_size",
+        "pk":"fbf13e53-12cb-4727-b241-30bd3b5e8e6e",
+        "fields":{
+            "category": "2f5a739e-d241-47f8-b617-e583a0c6205d",
+            "value": "6"
+        }
+    },
+    {
+        "model":"products.p_size",
+        "pk":"e63cc087-4c5c-4c1a-a40a-d7024a9092d2",
+        "fields":{
+            "category": "2f5a739e-d241-47f8-b617-e583a0c6205d",
+            "value": "7"
+        }
+    },
+    {
+        "model":"products.p_size",
+        "pk":"03826975-de58-4c17-80a5-aca31f65e2b1",
+        "fields":{
+            "category": "2f5a739e-d241-47f8-b617-e583a0c6205d",
+            "value": "8"
+        }
+    },
+    {
+        "model":"products.p_size",
+        "pk":"cfdeaf1e-13db-4f6f-b2ce-10e2b56fd535",
+        "fields":{
+            "category": "2f5a739e-d241-47f8-b617-e583a0c6205d",
+            "value": "9"
+        }
+    },
+    {
+        "model":"products.p_size",
+        "pk":"d715b6b6-11d5-49ab-8417-af700ae06ce4",
+        "fields":{
+            "category": "2f5a739e-d241-47f8-b617-e583a0c6205d",
+            "value": "10"
         }
     }
 ]
