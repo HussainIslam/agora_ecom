@@ -38,6 +38,8 @@ class PColorSerializer(serializers.ModelSerializer):
         fields = '__all__'
 
 class PSizeSerializer(serializers.ModelSerializer):
+    category = serializers.HyperlinkedRelatedField(read_only=True, view_name='category')
+
 
     class Meta:
         model = P_Size
