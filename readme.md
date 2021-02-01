@@ -34,4 +34,4 @@ Administrator should be able to:
 - [ ] create/update/retrieve/delete addresses
 
 ## Entity Relationship Diagram (ERD)
-![](/agora_erd.svg?raw=true)
+![](/design_assets/agora_erd.svg?raw=true)
