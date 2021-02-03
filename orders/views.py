@@ -1,7 +1,7 @@
 from rest_framework import generics
 
-from .models import Shipper, Order, Orderline
-from .serializers import ShipperSerializer, OrderSerializer, OrderlineSerializer
+from .models import Shipper, Order, Orderline, Payment
+from .serializers import ShipperSerializer, OrderSerializer, OrderlineSerializer, PaymentSerializer
 
 class ShipperList(generics.ListCreateAPIView):
     queryset = Shipper.objects.all()
@@ -26,3 +26,11 @@ class OrderlineList(generics.ListCreateAPIView):
 class OrderlineDetail(generics.RetrieveUpdateDestroyAPIView):
     queryset = Orderline.objects.all()
     serializer_class = OrderlineSerializer
+
+class PaymentList(generics.ListCreateAPIView):
+    queryset = Payment.objects.all()
+    serializer_class = PaymentSerializer
+
+class PaymentDetail(generics.RetrieveUpdateDestroyAPIView):
+    queryset = Payment.objects.all()
+    serializer_class = PaymentSerializer
