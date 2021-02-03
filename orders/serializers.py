@@ -29,7 +29,7 @@ class OrderlineSerializer(serializers.ModelSerializer):
         fields = '__all__'
 
 class PaymentSerializer(serializers.ModelSerializer):
-    order = serializers.HyperlinkedRelatedField(read_only=True, view_name='payment')
+    order = serializers.HyperlinkedRelatedField(read_only=True, view_name='order')
 
     class Meta:
         model = Payment
