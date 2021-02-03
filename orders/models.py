@@ -14,6 +14,19 @@ class Shipper(models.Model):
     shipper_address = models.ForeignKey(Address, on_delete=models.RESTRICT, related_name='shipper_address')
 
 
+class Promotion(models.Model):
+    promotion_id = models.UUIDField(primary_key = True, default = uuid.uuid4, editable = False)
+    promotion_name = models.CharField(max_length=200, blank = True, null = True)
+    promotion_description = models.TextField(blank = True, null = True)
+    minimum_purchase_amount = models.FloatField(blank = True, null = True)
+    maximum_purchase_amount = models.FloatField(blank = True, null = True)
+    discount_rate = models.FloatField(blank = True, null = True)
+    discount_amount = models.FloatField(blank = True, null = True)
+    free_delivery = models.BooleanField(default = False, blank = True, null = True)
+    start_date = models.DateTimeField(blank = True, null = True)
+    end_date = models.DateTimeField(blank = True, null = True)
+
+
 class Order(models.Model):
     order_id = models.UUIDField(primary_key = True, default=uuid.uuid4, editable = False)
     date = models.DateTimeField(auto_now_add=True)
@@ -32,6 +45,7 @@ class Orderline(models.Model):
     total_price = models.FloatField()
     color = models.ForeignKey(P_Color, on_delete=models.RESTRICT, related_name='color_orderline')
     size = models.ForeignKey(P_Size, on_delete=models.RESTRICT, related_name='size_orderline')
+    promotion = models.ForeignKey(Promotion, on_delete=models.RESTRICT, blank = True, null = True)
 
 class Payment(models.Model):
     payment_id = models.UUIDField(primary_key = True, default = uuid.uuid4, editable = False)
