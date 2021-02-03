@@ -1,0 +1,24 @@
+[
+    {
+        "model": "orders.payment",
+        "pk": "4dff8c20-4748-4d47-9d3c-07f2f8caa99a",
+        "fields": {
+            "payment_method": "Visa",
+            "payment_date": "2012-09-15T22:17:44+00:00",
+            "payment_status": "Paid",
+            "payment_amount": 300,
+            "order": "da19d5f9-143d-4e60-9b36-79d5f8346b92"
+        }
+    },
+    {
+        "model": "orders.payment",
+        "pk": "067ed003-3491-4716-9a63-be74889d0461",
+        "fields": {
+            "payment_method": "Visa",
+            "payment_date": "2012-09-15T22:17:44+00:00",
+            "payment_status": "Paid",
+            "payment_amount": 300,
+            "order": "b684d921-41b4-4982-8ca9-6851a5653037"
+        }
+    }
+]

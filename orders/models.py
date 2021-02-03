@@ -20,6 +20,21 @@ class Order(models.Model):
     billing_address = models.ForeignKey(Address, on_delete=models.RESTRICT, related_name='billing_address_order')
     shipping_address = models.ForeignKey(Address, on_delete=models.RESTRICT, related_name='shipping_address_order')
     bill_amount = models.FloatField(default=0.00)
+    shipper = models.ForeignKey(Shipper, on_delete=models.RESTRICT, related_name='shipper_order')
+    tracking_number = models.CharField(max_length=50, blank=True, null=True)
+
+
+class Orderline(models.Model):
+    orderline_id = models.UUIDField(primary_key = True, default = uuid.uuid4, editable = False)
+    order = models.ForeignKey(Order, on_delete=models.CASCADE, blank=True, null=True)
+    product = models.ManyToManyField(Product, related_name='product_orderline')
+    quantity = models.FloatField()
+    total_price = models.FloatField()
+    color = models.ForeignKey(P_Color, on_delete=models.RESTRICT, related_name='color_orderline')
+    size = models.ForeignKey(P_Size, on_delete=models.RESTRICT, related_name='size_orderline')
+
+class Payment(models.Model):
+    payment_id = models.UUIDField(primary_key = True, default = uuid.uuid4, editable = False)
     PAYMENT_METHOD_CHOICES = [
         ('Mastercard', 'Mastercard'),
         ('Visa', 'Visa'),
@@ -34,15 +49,4 @@ class Order(models.Model):
     ]
     payment_status = models.CharField(max_length=10, choices=PAYMENT_STATUS_CHOICES, default='Unpaid', blank=False, null=False)
     payment_amount = models.FloatField(default=0.00)
-    shipper = models.ForeignKey(Shipper, on_delete=models.RESTRICT, related_name='shipper_order')
-    tracking_number = models.CharField(max_length=50, blank=True, null=True)
-
-
-class Orderline(models.Model):
-    orderline_id = models.UUIDField(primary_key = True, default = uuid.uuid4, editable = False)
-    order = models.ForeignKey(Order, on_delete=models.CASCADE, blank=True, null=True)
-    product = models.ManyToManyField(Product, related_name='product_orderline')
-    quantity = models.FloatField()
-    total_price = models.FloatField()
-    color = models.ForeignKey(P_Color, on_delete=models.RESTRICT, related_name='color_orderline')
-    size = models.ForeignKey(P_Size, on_delete=models.RESTRICT, related_name='size_orderline')
+    order = models.OneToOneField(Order, on_delete=models.CASCADE, blank=True, null=True)
