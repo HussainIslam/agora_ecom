@@ -1,6 +1,6 @@
 from rest_framework import serializers
 
-from .models import Shipper, Order, Orderline
+from .models import Shipper, Order, Orderline, Payment
 
 class ShipperSerializer(serializers.ModelSerializer):
     shipper_address = serializers.HyperlinkedRelatedField(read_only=True, view_name='address')
@@ -26,4 +26,11 @@ class OrderlineSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Orderline
+        fields = '__all__'
+
+class PaymentSerializer(serializers.ModelSerializer):
+    order = serializers.HyperlinkedRelatedField(read_only=True, view_name='payment')
+
+    class Meta:
+        model = Payment
         fields = '__all__'
