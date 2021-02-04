@@ -1,0 +1,32 @@
+[
+    {
+        "model": "orders.promotion",
+        "pk": "bb0e5db7-1d16-4a64-b89f-c3978e2b37fa",
+        "fields": {
+            "promotion_name": "Holiday Discount",
+            "promotion_description": "Promotions during the holiday seasons",
+            "minimum_purchase_amount": 50,
+            "maximum_purchase_amount": 500,
+            "discount_rate": 0.5,
+            "discount_amount": null,
+            "free_delivery": true,
+            "start_date": "2012-09-15T22:17:44+00:00",
+            "end_date": "2013-01-15T22:17:44+00:00"
+        }
+    },
+    {
+        "model": "orders.promotion",
+        "pk": "4e7b35e9-0e7a-4218-bc09-e2e8aad87270",
+        "fields": {
+            "promotion_name": "Summer Sale",
+            "promotion_description": "Discounts during summer",
+            "minimum_purchase_amount": 100,
+            "maximum_purchase_amount": 500,
+            "discount_rate": null,
+            "discount_amount": 20,
+            "free_delivery": false,
+            "start_date": "2012-09-15T22:17:44+00:00",
+            "end_date": "2013-01-15T22:17:44+00:00"
+        }
+    }
+]

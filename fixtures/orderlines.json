@@ -8,7 +8,8 @@
             "quantity":1,
             "total_price":23.3,
             "color":"bcd15694-b4a5-49de-b2ea-5c0a14a9800d",
-            "size":"91466234-5e2b-430b-af56-c451777af458"
+            "size":"91466234-5e2b-430b-af56-c451777af458",
+            "promotion": "bb0e5db7-1d16-4a64-b89f-c3978e2b37fa"
         }
     },
     {
@@ -20,7 +21,8 @@
             "quantity":2,
             "total_price":101.7,
             "color":"bcd15694-b4a5-49de-b2ea-5c0a14a9800d",
-            "size":"2ab1c91c-de21-4796-bb3b-875892edbd3f"
+            "size":"2ab1c91c-de21-4796-bb3b-875892edbd3f",
+            "promotion": "bb0e5db7-1d16-4a64-b89f-c3978e2b37fa"
         }
     },
     {
@@ -32,7 +34,8 @@
             "quantity":1,
             "total_price":23.3,
             "color":"c3960a02-97ff-4146-8108-4835cdfd6545",
-            "size":"6b10c89b-c39c-4d48-b11c-eee7b7ff7166"
+            "size":"6b10c89b-c39c-4d48-b11c-eee7b7ff7166",
+            "promotion": "4e7b35e9-0e7a-4218-bc09-e2e8aad87270"
         }
     }
 ]
