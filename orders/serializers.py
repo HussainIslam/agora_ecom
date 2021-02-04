@@ -23,6 +23,7 @@ class OrderlineSerializer(serializers.ModelSerializer):
     product = serializers.HyperlinkedRelatedField(many=True, read_only=True, view_name='product')
     color = serializers.HyperlinkedRelatedField(read_only=True, view_name='color')
     size = serializers.HyperlinkedRelatedField(read_only=True, view_name='size')
+    promotion = serializers.HyperlinkedRelatedField(read_only=True, view_name='promotion')
 
     class Meta:
         model = Orderline
