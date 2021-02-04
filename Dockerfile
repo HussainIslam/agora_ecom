@@ -1,6 +1,6 @@
 # Base Image
 
-FROM python:3.7
+FROM python:3.7-slim-buster
 
 WORKDIR /app
 
@@ -18,7 +18,10 @@ RUN apt-get update && \
     pipenv install --skip-lock --system --dev && \
     python manage.py makemigrations && \
     python manage.py migrate && \
-    python manage.py collectstatic --noinput
+    python manage.py collectstatic --noinput && \
+    apt-get clean && \
+    apt-get autoclean && \
+    apt-get autoremove
 
 EXPOSE 8888
 CMD gunicorn agora_project.wsgi:application --bind 0.0.0.0:$PORT
