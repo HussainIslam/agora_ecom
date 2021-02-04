@@ -11,4 +11,6 @@ urlpatterns = [
     path('orderlines/<uuid:pk>/', views.OrderlineDetail.as_view(), name='orderline'),
     path('payments/', views.PaymentList.as_view(), name='payments'),
     path('payments/<uuid:pk>/', views.PaymentDetail.as_view(), name='payment'),
+    path('promotions/', views.PromotionList.as_view(), name='promotions'),
+    path('promotions/<uuid:pk>/', views.PromotionDetail.as_view(), name='promotion')
 ]
