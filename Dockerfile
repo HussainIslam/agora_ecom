@@ -12,14 +12,14 @@ ENV DEBIAN_FRONTEND=noninteractive
 ENV PORT=8888
 
 
-RUN apt-get update
-RUN pip3 install --upgrade pip 
-RUN pip3 install pipenv
-RUN pipenv install --skip-lock --system --dev
+RUN apt-get update && \
+    pip3 install --upgrade pip && \
+    pip3 install pipenv && \
+    pipenv install --skip-lock --system --dev && \
+    python manage.py makemigrations && \
+    python manage.py migrate && \
+    python manage.py collectstatic --noinput
 
 EXPOSE 8888
-RUN python manage.py makemigrations 
-RUN python manage.py migrate
-RUN python manage.py collectstatic --noinput
 CMD gunicorn agora_project.wsgi:application --bind 0.0.0.0:$PORT
 RUN python manage.py loaddata fixtures/*.json
