@@ -1,5 +1,6 @@
 import uuid
 from django.db import models
+from datetime import date
 
 class P_Category(models.Model):
     category_id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
@@ -64,11 +65,13 @@ class Product(models.Model):
     def __str__(self):
         return self.product_name
 
+def product_image_path(instance, filename):
+    return f'products/{date.today().year}/{date.today().month}/{instance.product.product_id}/{filename}'
 
 class P_Image(models.Model):
     image_id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
-    image = models.ImageField(blank=True, null=True)
-    product = models.ForeignKey(Product, on_delete=models.CASCADE)
+    image = models.ImageField(upload_to=product_image_path,blank=True, null=True)
+    product = models.ForeignKey(Product, on_delete=models.CASCADE, related_name="product_image")
 
     def __str__(self):
         return f'Image for {str(self.product)}'
