@@ -18,7 +18,7 @@ class CartItem(models.Model):
     quantity = models.FloatField(default=0.00)
     added_time = models.DateTimeField(auto_now_add=True)
     modification_time = models.DateTimeField(auto_now=True)
-    products = models.ManyToManyField(Product, related_name='product_cart')
+    product = models.ForeignKey(Product, on_delete=models.CASCADE,related_name='product_cart')
     cart = models.ForeignKey(Cart, on_delete=models.CASCADE, related_name='cart_cartitem')
     color = models.ForeignKey(P_Color, on_delete=models.RESTRICT, blank=True, null=True)
     size = models.ForeignKey(P_Size, on_delete = models.RESTRICT, blank=True, null=True)

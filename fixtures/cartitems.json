@@ -1,0 +1,12 @@
+[
+    {
+        "model": "carts.cartitem",
+        "pk":"",
+        "fields":{
+            "quantity":5,
+            "added_time": "",
+            "modification_time": "",
+            "product"
+        }
+    }
+]
