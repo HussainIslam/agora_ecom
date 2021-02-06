@@ -6,6 +6,7 @@ class P_Category(models.Model):
     category_id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
     category_name = models.CharField(max_length=50)
     category_description = models.TextField()
+    banner = models.ImageField(upload_to='category/', blank = True, null = True)
     parent_category = models.ForeignKey('self', on_delete=models.CASCADE, null=True, blank=True)
 
     def __str__(self):
