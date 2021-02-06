@@ -1,0 +1,20 @@
+[
+    {
+        "model": "carts.cart",
+        "pk": "1cd7dd8e-14fd-43cb-9997-3631eebcf69d",
+        "fields":{
+            "creation_time": "2012-09-15T22:17:44+00:00",
+            "modification_time": "2012-09-15T22:17:44+00:00",
+            "customer": 3
+        }
+    },
+    {
+        "model": "carts.cart",
+        "pk": "73925814-57de-4f60-a375-b45580d057f5",
+        "fields":{
+            "creation_time": "2012-09-15T22:17:44+00:00",
+            "modification_time": "2012-09-15T22:17:44+00:00",
+            "customer": 4
+        }
+    }
+]
