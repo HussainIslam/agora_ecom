@@ -2,6 +2,15 @@
 
 FROM python:3.7-slim-buster
 
+# Arguments
+ARG DEBUG
+ARG DB_ENGINE
+ARG DB_NAME
+ARG DB_USER
+ARG DB_PASSWORD
+ARG DB_HOST
+ARG DB_PORT
+
 WORKDIR /app
 
 ADD . /app/
