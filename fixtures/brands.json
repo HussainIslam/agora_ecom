@@ -5,7 +5,7 @@
         "fields":{
             "brand_name":"Gucci",
             "brand_description":"Luxury fashion house based in Florence, Italy.",
-            "brand_logo":null,
+            "brand_logo":"brands/gucci.png",
             "brand_website":"http://gucci.com"
         }
     },
@@ -15,7 +15,7 @@
         "fields":{
             "brand_name":"GAP",
             "brand_description":"American worldwide clothing and accessories retailer.",
-            "brand_logo":null,
+            "brand_logo":"brands/gap.png",
             "brand_website":"http://gap.com"
         }
     },
@@ -25,7 +25,7 @@
         "fields":{
             "brand_name":"H&M",
             "brand_description":"Swedish multinational clothing-retail company known for its fast-fashion clothing for men, women, teenagers and children",
-            "brand_logo":null,
+            "brand_logo":"brands/h&m.png",
             "brand_website":"http://hmgroup.com"
         }
     },
@@ -35,7 +35,7 @@
         "fields":{
             "brand_name":"Black+Decker",
             "brand_description":" American manufacturer of power tools, accessories, hardware, home improvement products, home appliances and fastening systems",
-            "brand_logo":null,
+            "brand_logo":"brands/black&decker.png",
             "brand_website":"http://blackanddecker.com"
         }
     },
@@ -45,7 +45,7 @@
         "fields":{
             "brand_name":"Samsung",
             "brand_description":"South Korean multinational conglomerate headquartered in Samsung Town, Seoul",
-            "brand_logo":null,
+            "brand_logo":"brands/samsung.png",
             "brand_website":"http://samsung.com"
         }
     },
@@ -55,7 +55,7 @@
         "fields":{
             "brand_name":"Apple",
             "brand_description":"American multinational technology company headquartered in Cupertino, California, that designs, develops, and sells consumer electronics",
-            "brand_logo":null,
+            "brand_logo":"brands/apple.svg",
             "brand_website":"http://apple.com"
         }
     }
