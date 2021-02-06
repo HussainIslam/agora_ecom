@@ -47,6 +47,7 @@ class PSizeSerializer(serializers.ModelSerializer):
         fields = '__all__'
 
 class PImageSerializer(serializers.ModelSerializer):
+    product = serializers.HyperlinkedRelatedField(read_only = True, view_name='product')
 
     class Meta:
         model = P_Image

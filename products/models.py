@@ -1,6 +1,7 @@
 import uuid
 from django.db import models
 from datetime import date
+from django.utils import timezone
 
 class P_Category(models.Model):
     category_id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
@@ -72,6 +73,7 @@ def product_image_path(instance, filename):
 class P_Image(models.Model):
     image_id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
     image = models.ImageField(upload_to=product_image_path,blank=True, null=True)
+    added_on = models.DateTimeField(auto_now_add=True)
     product = models.ForeignKey(Product, on_delete=models.CASCADE, related_name="product_image")
 
     def __str__(self):

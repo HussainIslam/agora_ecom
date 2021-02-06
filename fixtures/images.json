@@ -1,0 +1,11 @@
+[
+    {
+        "model": "products.p_image",
+        "pk": "991e9d03-a29b-46ab-b6da-4c5021e88daa",
+        "fields":{
+            "image": "products/white_shirt_men.jpg",
+            "added_on": "2012-09-15T22:17:44+00:00",
+            "product": "b0162041-7ef2-4606-81f7-932408ca9939"
+        }
+    }
+]
