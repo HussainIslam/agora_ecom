@@ -27,7 +27,7 @@ urlpatterns = [
    path('', include('pages.urls')),
    path('', include('products.urls')),
    path('', include('orders.urls')),
-   path('carts/',include('carts.urls')),
+   path('',include('carts.urls')),
    path('admin/', admin.site.urls),
    path('rest-auth/', include('rest_auth.urls')),
    path('rest-auth/registration/', include('rest_auth.registration.urls')),
