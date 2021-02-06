@@ -1,12 +1,53 @@
 [
     {
         "model": "carts.cartitem",
-        "pk":"",
+        "pk":"52463173-0a8e-4950-b625-5e12fb2731f7",
         "fields":{
             "quantity":5,
-            "added_time": "",
-            "modification_time": "",
-            "product"
+            "added_time": "2012-09-15T22:17:44+00:00",
+            "modification_time": "2012-09-15T22:17:44+00:00",
+            "product": "b0162041-7ef2-4606-81f7-932408ca9939",
+            "cart": "1cd7dd8e-14fd-43cb-9997-3631eebcf69d",
+            "color": "c3960a02-97ff-4146-8108-4835cdfd6545",
+            "size": "6b10c89b-c39c-4d48-b11c-eee7b7ff7166"
+        }
+    },
+    {
+        "model": "carts.cartitem",
+        "pk":"c482561c-6cbb-43f9-8ada-5d9aabd2a6d8",
+        "fields":{
+            "quantity":5,
+            "added_time": "2012-09-15T22:17:44+00:00",
+            "modification_time": "2012-09-15T22:17:44+00:00",
+            "product": "722c0fc5-3670-491b-924a-4a2b13212c05",
+            "cart": "1cd7dd8e-14fd-43cb-9997-3631eebcf69d",
+            "color": "bcd15694-b4a5-49de-b2ea-5c0a14a9800d",
+            "size": "2ab1c91c-de21-4796-bb3b-875892edbd3f"
+        }
+    },
+    {
+        "model": "carts.cartitem",
+        "pk":"38ab962b-7bf5-410c-99b6-8919adf29a36",
+        "fields":{
+            "quantity":5,
+            "added_time": "2012-09-15T22:17:44+00:00",
+            "modification_time": "2012-09-15T22:17:44+00:00",
+            "product": "cde39a43-ffca-4a8c-b84f-7606750d142c",
+            "cart": "1cd7dd8e-14fd-43cb-9997-3631eebcf69d",
+            "color": "bcd15694-b4a5-49de-b2ea-5c0a14a9800d",
+            "size": "91466234-5e2b-430b-af56-c451777af458"
+        }
+    },{
+        "model": "carts.cartitem",
+        "pk":"f86f841f-c0f7-413f-afef-82f43b434c3e",
+        "fields":{
+            "quantity":5,
+            "added_time": "2012-09-15T22:17:44+00:00",
+            "modification_time": "2012-09-15T22:17:44+00:00",
+            "product": "a0589258-3d2c-470b-8a33-5eb24e160827",
+            "cart": "1cd7dd8e-14fd-43cb-9997-3631eebcf69d",
+            "color": "08bd7728-3b10-474f-a562-a4b756ea2c97",
+            "size": "89e208dc-ac11-47f8-ac11-26c529e0d919"
         }
     }
 ]
