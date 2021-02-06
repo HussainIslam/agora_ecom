@@ -7,5 +7,32 @@
             "added_on": "2012-09-15T22:17:44+00:00",
             "product": "b0162041-7ef2-4606-81f7-932408ca9939"
         }
+    },
+    {
+        "model": "products.p_image",
+        "pk": "71cd7c2a-4066-4bf4-b485-a23c2e0a29de",
+        "fields":{
+            "image": "products/tank_top_women.jpg",
+            "added_on": "2012-09-15T22:17:44+00:00",
+            "product": "722c0fc5-3670-491b-924a-4a2b13212c05"
+        }
+    },
+    {
+        "model": "products.p_image",
+        "pk": "02711494-93f2-442f-bb3d-90c4b91f8be6",
+        "fields":{
+            "image": "products/sports_shoe_men.jpg",
+            "added_on": "2012-09-15T22:17:44+00:00",
+            "product": "cde39a43-ffca-4a8c-b84f-7606750d142c"
+        }
+    },
+    {
+        "model": "products.p_image",
+        "pk": "3b905107-17a5-47c1-913c-cfdd2c99098d",
+        "fields":{
+            "image": "products/running_shoe_women.jpg",
+            "added_on": "2012-09-15T22:17:44+00:00",
+            "product": "a0589258-3d2c-470b-8a33-5eb24e160827"
+        }
     }
 ]
