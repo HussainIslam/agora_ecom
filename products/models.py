@@ -37,7 +37,7 @@ class P_Color(models.Model):
 class P_Size(models.Model):
     size_id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
     category = models.ForeignKey(P_Category, on_delete=models.CASCADE, related_name='category_size')
-    value = models.CharField(max_length=10)
+    value = models.CharField(max_length=25)
 
     def __str__(self):
         return f'{self.value} of {str(self.category)}'

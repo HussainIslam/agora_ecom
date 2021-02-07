@@ -20,10 +20,10 @@ done
 
 # Build the image
 echo "[ Message ] Building new image"
-docker build -t ${image_name} --file Dockerfile . --quiet ${build_args}> /dev/null
+docker build -t ${image_name} --file Dockerfile . --quiet ${build_args} --network host> /dev/null
 
 
 echo "[ Message ] Running container"
-docker run --name ${container_name} -it -p 80:8888 -d ${image_name} > /dev/null
+docker run --name ${container_name} --network=host -it -d ${image_name}> /dev/null
 
 docker ps --filter "name=${container_name}"
