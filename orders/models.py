@@ -1,7 +1,8 @@
 import uuid
 from django.db import models
+from django.contrib.auth import get_user_model
 
-from accounts.models import CustomUser, Address
+from accounts.models import Address
 from products.models import Product, P_Color, P_Size
 
 
@@ -35,6 +36,7 @@ class Order(models.Model):
     bill_amount = models.FloatField(default=0.00)
     shipper = models.ForeignKey(Shipper, on_delete=models.RESTRICT, related_name='shipper_order')
     tracking_number = models.CharField(max_length=50, blank=True, null=True)
+    customer = models.ForeignKey(get_user_model(), on_delete=models.CASCADE, related_name='customer_order')
 
 
 class Orderline(models.Model):

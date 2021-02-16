@@ -17,6 +17,7 @@ class Address(models.Model):
     country = models.CharField(max_length=20)
 
 class CustomUser(AbstractUser):
+    id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
     billing_address = models.ForeignKey(Address, on_delete=models.RESTRICT, blank=True, null=True, related_name='billing_address')
     shipping_address = models.ForeignKey(Address, on_delete=models.RESTRICT, blank=True, null=True, related_name='shipping_address')
     date_of_birth = models.DateField(auto_now_add=datetime.date.today(), editable=True, blank=False)

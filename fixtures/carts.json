@@ -5,7 +5,7 @@
         "fields":{
             "creation_time": "2012-09-15T22:17:44+00:00",
             "modification_time": "2012-09-15T22:17:44+00:00",
-            "customer": 3
+            "customer": "b854c05a-b261-4be6-ac53-71db3975269c"
         }
     },
     {
@@ -14,7 +14,7 @@
         "fields":{
             "creation_time": "2012-09-15T22:17:44+00:00",
             "modification_time": "2012-09-15T22:17:44+00:00",
-            "customer": 4
+            "customer": "9f0aa123-89a7-44c2-a441-c4cb8c23424b"
         }
     }
 ]
