@@ -8,7 +8,8 @@
             "shipping_address": "d80e50af-7786-4094-a9fb-d149ebb6a254",
             "bill_amount": 300,
             "shipper": "8eee89c5-22d0-4c96-88a6-3ac9e6051c1d",
-            "tracking_number": "123"
+            "tracking_number": "123",
+            "customer": "b854c05a-b261-4be6-ac53-71db3975269c"
         }
     },
     {
@@ -20,7 +21,8 @@
             "shipping_address": "19aec876-bb7e-43eb-a02f-d07e8c7b4ed5",
             "bill_amount": 300,
             "shipper": "bab2a23d-885e-492d-86d9-ad1ac15ad7b8",
-            "tracking_number": "123"
+            "tracking_number": "123",
+            "customer": "9f0aa123-89a7-44c2-a441-c4cb8c23424b"
         }
     }
 ]
