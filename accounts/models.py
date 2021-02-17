@@ -17,7 +17,9 @@ class Address(models.Model):
     country = models.CharField(max_length=20)
 
 class CustomUser(AbstractUser):
-    id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
+    first_name = models.CharField(max_length=200, blank=True, null=True)
+    last_name = models.CharField(max_length=200, blank=True, null=True)
+    user_id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
     billing_address = models.ForeignKey(Address, on_delete=models.RESTRICT, blank=True, null=True, related_name='billing_address')
     shipping_address = models.ForeignKey(Address, on_delete=models.RESTRICT, blank=True, null=True, related_name='shipping_address')
     date_of_birth = models.DateField(auto_now_add=datetime.date.today(), editable=True, blank=False)
@@ -26,11 +28,15 @@ class CustomUser(AbstractUser):
     GENDER_CHOICES = [
         ('Male', 'Male'),
         ('Female', 'Female'),
-        ("Don't want to disclose", "Don't want to disclose")
+        ("Don't want to disclose", "Don't want to disclose"),
+        ("Haven't mentioned", "Haven't mentioned")
     ]
-    gender = models.CharField(max_length=25, choices=GENDER_CHOICES, default="Don't want to disclose", blank=True, null=True)
+    gender = models.CharField(max_length=25, choices=GENDER_CHOICES, default="Haven't mentioned", blank=True, null=True)
     registered_on = models.DateTimeField(auto_now_add=True)
     last_modified = models.DateTimeField(auto_now=True)
+    is_active = models.BooleanField(default=True)
+    is_staff = models.BooleanField(default=False)
+
 
     USERNAME_FIELD = 'email'
     REQUIRED_FIELDS = []

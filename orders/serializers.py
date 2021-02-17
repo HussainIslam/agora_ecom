@@ -13,6 +13,7 @@ class OrderSerializer(serializers.ModelSerializer):
     shipper = serializers.HyperlinkedRelatedField(read_only=True, view_name='shipper')
     billing_address = serializers.HyperlinkedRelatedField(read_only=True, view_name='address')
     shipping_address = serializers.HyperlinkedRelatedField(read_only=True, view_name='address')
+    customer = serializers.HyperlinkedRelatedField(read_only=True, view_name='user-detail')
 
     class Meta:
         model = Order

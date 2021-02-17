@@ -39,7 +39,6 @@
             "date_of_birth":"2012-09-15",
             "phone": "333-444-5555",
             "email": "m.hussainul.islam@gmail.com",
-            "password": "123456",
             "gender":"Female",
             "registered_on":"2012-09-15T22:17:44+00:00",
             "last_modified": "2012-09-15T22:17:44+00:00"
