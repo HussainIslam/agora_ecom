@@ -14,6 +14,8 @@ class Shipper(models.Model):
     website = models.URLField()
     shipper_address = models.ForeignKey(Address, on_delete=models.RESTRICT, related_name='shipper_address')
 
+    def __str__(self):
+        return self.shipper_name
 
 class Promotion(models.Model):
     promotion_id = models.UUIDField(primary_key = True, default = uuid.uuid4, editable = False)
@@ -27,6 +29,8 @@ class Promotion(models.Model):
     start_date = models.DateTimeField(blank = True, null = True)
     end_date = models.DateTimeField(blank = True, null = True)
 
+    def __str__(self):
+        return self.promotion_id
 
 class Order(models.Model):
     order_id = models.UUIDField(primary_key = True, default=uuid.uuid4, editable = False)
@@ -38,6 +42,8 @@ class Order(models.Model):
     tracking_number = models.CharField(max_length=50, blank=True, null=True)
     customer = models.ForeignKey(get_user_model(), on_delete=models.CASCADE, related_name='customer_order')
 
+    def __str__(self):
+        return self.order_id
 
 class Orderline(models.Model):
     orderline_id = models.UUIDField(primary_key = True, default = uuid.uuid4, editable = False)
@@ -48,6 +54,9 @@ class Orderline(models.Model):
     color = models.ForeignKey(P_Color, on_delete=models.RESTRICT, related_name='color_orderline')
     size = models.ForeignKey(P_Size, on_delete=models.RESTRICT, related_name='size_orderline')
     promotion = models.ForeignKey(Promotion, on_delete=models.RESTRICT, blank = True, null = True)
+
+    def __str__(self):
+        return self.orderline_id
 
 class Payment(models.Model):
     payment_id = models.UUIDField(primary_key = True, default = uuid.uuid4, editable = False)
@@ -66,3 +75,6 @@ class Payment(models.Model):
     payment_status = models.CharField(max_length=10, choices=PAYMENT_STATUS_CHOICES, default='Unpaid', blank=False, null=False)
     payment_amount = models.FloatField(default=0.00)
     order = models.OneToOneField(Order, on_delete=models.CASCADE, blank=True, null=True)
+
+    def __str__(self):
+        return self.payment_id

@@ -11,7 +11,7 @@ class Cart(models.Model):
     customer = models.OneToOneField(get_user_model(), on_delete=models.CASCADE, related_name='customer_cart')
 
     def __str__(self):
-        return self.customer
+        return f'{self.cart_id}'
 
 class CartItem(models.Model):
     cartitem_id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
@@ -22,3 +22,6 @@ class CartItem(models.Model):
     cart = models.ForeignKey(Cart, on_delete=models.CASCADE, related_name='cart_cartitem')
     color = models.ForeignKey(P_Color, on_delete=models.RESTRICT, blank=True, null=True)
     size = models.ForeignKey(P_Size, on_delete = models.RESTRICT, blank=True, null=True)
+
+    def __str__(self):
+        return f'{self.product}'

@@ -16,6 +16,9 @@ class Address(models.Model):
     postal_code = models.CharField(max_length=10)
     country = models.CharField(max_length=20)
 
+    def __str__(self):
+        return f'{self.street_address}'
+
 class CustomUser(AbstractUser):
     first_name = models.CharField(max_length=200, blank=True, null=True)
     last_name = models.CharField(max_length=200, blank=True, null=True)
@@ -43,4 +46,10 @@ class CustomUser(AbstractUser):
     objects = CustomUserManager()
 
     def __str__(self):
-        return self.email
+        first_name = "No first name registered"
+        last_name = "No last name registered"
+        if self.first_name != None: 
+            first_name = self.first_name
+        if self.last_name != None:
+            last_name = self.last_name
+        return '{} {}'.format(first_name, last_name)
