@@ -3,45 +3,60 @@
         "model":"accounts.CustomUser",
         "pk":"b854c05a-b261-4be6-ac53-71db3975269c",
         "fields":{
+            "first_name": "User",
+            "last_name": "One",
             "username": "user1",
             "billing_address":"d80e50af-7786-4094-a9fb-d149ebb6a254",
             "shipping_address":"51220ec8-6165-4da1-aad4-1e74ed9be776",
             "date_of_birth":"2012-09-15",
             "phone": "444-555-6666",
             "email": "user1@gmail.com",
+            "password": "123456",
             "gender":"Male",
             "registered_on":"2012-09-15T22:17:44+00:00",
-            "last_modified": "2012-09-15T22:17:44+00:00"
+            "last_modified": "2012-09-15T22:17:44+00:00",
+            "is_active": true,
+            "is_staff": false
         }
     },
     {
         "model":"accounts.CustomUser",
         "pk":"9f0aa123-89a7-44c2-a441-c4cb8c23424b",
         "fields":{
+            "first_name": "User",
+            "last_name": "Two",
             "username": "user2",
             "billing_address":"51220ec8-6165-4da1-aad4-1e74ed9be776",
             "shipping_address":"d80e50af-7786-4094-a9fb-d149ebb6a254",
             "date_of_birth":"2012-09-15",
             "phone": "333-444-5555",
             "email": "user2@gmail.com",
+            "password": "123456",
             "gender":"Female",
             "registered_on":"2012-09-15T22:17:44+00:00",
-            "last_modified": "2012-09-15T22:17:44+00:00"
+            "last_modified": "2012-09-15T22:17:44+00:00",
+            "is_active": true,
+            "is_staff": false
         }
     },
     {
         "model":"accounts.CustomUser",
         "pk":"de74740f-624a-4a54-80d5-24d4181d6d9a",
         "fields":{
+            "first_name": "Md. Hussainul Islam",
+            "last_name": "Sajib",
             "username": "hussain",
             "billing_address":"51220ec8-6165-4da1-aad4-1e74ed9be776",
             "shipping_address":"d80e50af-7786-4094-a9fb-d149ebb6a254",
             "date_of_birth":"2012-09-15",
             "phone": "333-444-5555",
             "email": "m.hussainul.islam@gmail.com",
+            "password": "123456",
             "gender":"Female",
             "registered_on":"2012-09-15T22:17:44+00:00",
-            "last_modified": "2012-09-15T22:17:44+00:00"
+            "last_modified": "2012-09-15T22:17:44+00:00",
+            "is_active": true,
+            "is_staff": true
         }
     }
 

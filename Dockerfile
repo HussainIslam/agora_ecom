@@ -10,6 +10,9 @@ ARG DB_USER
 ARG DB_PASSWORD
 ARG DB_HOST
 ARG DB_PORT
+ARG DJANGO_SUPERUSER_PASSWORD
+ARG DJANGO_SUPERUSER_EMAIL
+
 
 WORKDIR /app
 
@@ -26,6 +29,8 @@ ENV DB_USER=${DB_USER}
 ENV DB_PASSWORD=${DB_PASSWORD}
 ENV DB_HOST=${DB_HOST}
 ENV DB_PORT=${DB_PORT}
+ENV DJANGO_SUPERUSER_PASSWORD=${DJANGO_SUPERUSER_PASSWORD}
+ENV DJANGO_SUPERUSER_EMAIL=${DJANGO_SUPERUSER_EMAIL}
 
 
 RUN apt-get update && \
@@ -39,7 +44,9 @@ RUN apt-get update && \
     python manage.py collectstatic --noinput && \
     apt-get clean && \
     apt-get autoclean && \
-    apt-get autoremove
+    apt-get autoremove && \
+    python manage.py createsuperuser --email ${DJANGO_SUPERUSER_EMAIL} --noinput
+
 
 EXPOSE 80
 CMD gunicorn agora_project.wsgi:application --bind 0.0.0.0:$PORT

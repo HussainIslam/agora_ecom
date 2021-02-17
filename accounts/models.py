@@ -20,14 +20,15 @@ class Address(models.Model):
         return f'{self.street_address}'
 
 class CustomUser(AbstractUser):
+    user_id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
     first_name = models.CharField(max_length=200, blank=True, null=True)
     last_name = models.CharField(max_length=200, blank=True, null=True)
-    user_id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
     billing_address = models.ForeignKey(Address, on_delete=models.RESTRICT, blank=True, null=True, related_name='billing_address')
     shipping_address = models.ForeignKey(Address, on_delete=models.RESTRICT, blank=True, null=True, related_name='shipping_address')
     date_of_birth = models.DateField(auto_now_add=datetime.date.today(), editable=True, blank=False)
     phone = models.CharField(max_length=20, blank=True, null=True)
     email = models.EmailField(_('email address'), unique=True)
+    password = models.CharField(_('password'), max_length=128)
     GENDER_CHOICES = [
         ('Male', 'Male'),
         ('Female', 'Female'),
