@@ -30,7 +30,7 @@ class Promotion(models.Model):
     end_date = models.DateTimeField(blank = True, null = True)
 
     def __str__(self):
-        return self.promotion_id
+        return f'{self.promotion_name} start {self.start_date}'
 
 class Order(models.Model):
     order_id = models.UUIDField(primary_key = True, default=uuid.uuid4, editable = False)
@@ -43,7 +43,7 @@ class Order(models.Model):
     customer = models.ForeignKey(get_user_model(), on_delete=models.CASCADE, related_name='customer_order')
 
     def __str__(self):
-        return self.order_id
+        return f'Order of {self.customer} on {self.date}'
 
 class Orderline(models.Model):
     orderline_id = models.UUIDField(primary_key = True, default = uuid.uuid4, editable = False)
@@ -56,7 +56,7 @@ class Orderline(models.Model):
     promotion = models.ForeignKey(Promotion, on_delete=models.RESTRICT, blank = True, null = True)
 
     def __str__(self):
-        return self.orderline_id
+        return f'{self.product} {self.color} {self.size}'
 
 class Payment(models.Model):
     payment_id = models.UUIDField(primary_key = True, default = uuid.uuid4, editable = False)
@@ -77,4 +77,4 @@ class Payment(models.Model):
     order = models.OneToOneField(Order, on_delete=models.CASCADE, blank=True, null=True)
 
     def __str__(self):
-        return self.payment_id
+        return f'{self.payment_amount} paid through {self.payment_method}'
