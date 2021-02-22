@@ -12,6 +12,7 @@ django-rest-swagger = "*"
 drf-yasg = "*"
 coverage = "*"
 psycopg2-binary = "*"
+djangorestframework-simplejwt = "*"
 
 [dev-packages]
 

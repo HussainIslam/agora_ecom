@@ -6,5 +6,6 @@ from . import views
 
 urlpatterns = [
     path('addresses/', views.AddressList.as_view(), name='addresses'),
-    path('addresses/<uuid:pk>/', views.AddressDetail.as_view(), name='address')
+    path('addresses/<uuid:pk>/', views.AddressDetail.as_view(), name='address'),
+    path('users/', views.UserRegistrationAPIView.as_view(), name='registration')
 ]

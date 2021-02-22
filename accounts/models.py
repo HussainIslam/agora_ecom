@@ -1,5 +1,5 @@
 import uuid
-import datetime
+from datetime import datetime, timedelta
 from django.contrib.auth.models import AbstractUser
 from django.utils.translation import ugettext_lazy as _
 from django.db import models
@@ -23,9 +23,10 @@ class CustomUser(AbstractUser):
     user_id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
     first_name = models.CharField(max_length=200, blank=True, null=True)
     last_name = models.CharField(max_length=200, blank=True, null=True)
+    username = models.CharField(max_length=50, blank=True, null=True)
     billing_address = models.ForeignKey(Address, on_delete=models.RESTRICT, blank=True, null=True, related_name='billing_address')
     shipping_address = models.ForeignKey(Address, on_delete=models.RESTRICT, blank=True, null=True, related_name='shipping_address')
-    date_of_birth = models.DateField(auto_now_add=datetime.date.today(), editable=True, blank=False)
+    date_of_birth = models.DateField(auto_now_add=True, editable=True, blank=False)
     phone = models.CharField(max_length=20, blank=True, null=True)
     email = models.EmailField(_('email address'), unique=True)
     password = models.CharField(_('password'), max_length=128)
@@ -54,3 +55,4 @@ class CustomUser(AbstractUser):
         if self.last_name != None:
             last_name = self.last_name
         return '{} {}'.format(first_name, last_name)
+    
