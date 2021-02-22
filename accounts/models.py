@@ -28,7 +28,7 @@ class CustomUser(AbstractUser):
     shipping_address = models.ForeignKey(Address, on_delete=models.RESTRICT, blank=True, null=True, related_name='shipping_address')
     date_of_birth = models.DateField(auto_now_add=True, editable=True, blank=False)
     phone = models.CharField(max_length=20, blank=True, null=True)
-    email = models.EmailField(_('email address'), unique=True)
+    email = models.EmailField(_('email address'), unique=True, max_length=128)
     password = models.CharField(_('password'), max_length=128)
     GENDER_CHOICES = [
         ('Male', 'Male'),
