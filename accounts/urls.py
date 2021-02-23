@@ -4,6 +4,8 @@ from django.urls import path, include
 
 from . import views
 
+app_name='accounts'
+
 urlpatterns = [
     path('addresses/', views.AddressList.as_view(), name='addresses'),
     path('addresses/<uuid:pk>/', views.AddressDetail.as_view(), name='address'),
