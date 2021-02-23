@@ -46,6 +46,9 @@ expect "postgres=# "
 send "GRANT TEMP ON DATABASE ${database} TO ${username};\r"
 
 expect "postgres=# "
+send "ALTER USER ${username} CREATEDB;\r"
+
+expect "postgres=# "
 send "\\q\r"
 
 expect eof
