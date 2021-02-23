@@ -38,4 +38,4 @@ class LoginTestClass(TestCase):
             'password': self.password
         }
         login_response = self.client.post(path=self.login_url, data=req_data, content_type='application/json')
-        print(login_response.status_code)
+        self.assertEqual(login_response.status_code, 200)

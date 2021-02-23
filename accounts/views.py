@@ -30,5 +30,4 @@ class UserLoginAPIView(APIView):
     def post(self, request):
         serializer = UserLoginSerializer(data=request.data)
         serializer.is_valid(raise_exception=True)
-        print(serializer)
         return Response(serializer.data, status=status.HTTP_200_OK)
