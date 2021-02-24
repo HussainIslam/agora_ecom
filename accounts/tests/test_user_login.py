@@ -39,3 +39,23 @@ class LoginTestClass(TestCase):
         }
         login_response = self.client.post(path=self.login_url, data=req_data, content_type='application/json')
         self.assertEqual(login_response.status_code, 200)
+    
+    def test_login_reply_contains(self):
+        req_data = {
+            'email': self.email, 
+            'password': self.password
+        }
+        login_response = self.client.post(path=self.login_url, data=req_data, content_type='application/json')
+        self.assertContains(login_response, 'email')
+        self.assertContains(login_response, 'refresh')
+        self.assertContains(login_response, 'access')
+
+    def test_login_reply_response(self):
+        req_data = {
+            'email': self.email, 
+            'password': self.password
+        }
+        login_response = self.client.post(path=self.login_url, data=req_data, content_type='application/json')
+        self.assertEqual(login_response.data['email'], self.email)
+
+    
