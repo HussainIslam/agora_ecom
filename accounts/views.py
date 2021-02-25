@@ -44,3 +44,4 @@ class UserLogoutAPIView(APIView):
             return Response(data={"message": "Successfully logged out of agora"},status=status.HTTP_205_RESET_CONTENT)
         except Exception as e:
             return Response(status=status.HTTP_400_BAD_REQUEST)
+
