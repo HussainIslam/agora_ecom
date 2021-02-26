@@ -39,7 +39,7 @@ class UserLogoutAPIView(APIView):
 
     def post(self, request):
         try:
-            refresh_token = request.data['refresh']
+            refresh_token = request.META.get("HTTP_REFRESH")
             token = RefreshToken(refresh_token)
             token.blacklist()
 
