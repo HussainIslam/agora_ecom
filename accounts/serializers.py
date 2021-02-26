@@ -1,6 +1,7 @@
 from rest_framework import serializers
 from django.contrib.auth import authenticate
 from rest_framework_simplejwt.tokens import RefreshToken
+from django.contrib.auth.password_validation import validate_password
 
 from .models import CustomUser, Address
 
@@ -55,6 +56,14 @@ class UserLoginSerializer(serializers.Serializer):
             'access': str(tokens.access_token),
         }
 
+class ChangePasswordSerializer(serializers.Serializer):
+    model = CustomUser
+    old_password = serializers.CharField(max_length=64)
+    new_password = serializers.CharField(max_length=64)
+
+    def validate_new_password(self, value):
+        validate_password(value)
+        return value
 
 
 class AddressSerializer(serializers.ModelSerializer):

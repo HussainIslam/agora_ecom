@@ -1,9 +1,11 @@
+import jwt
+from django.conf import settings
 from rest_framework import generics, status
 from rest_framework.views import APIView
 from rest_framework.response import Response
 from rest_framework_simplejwt.tokens import RefreshToken
-from .models import Address
-from .serializers import (AddressSerializer, UserRegistrationSerializer, UserLoginSerializer, CustomUserSerializer)
+from .models import Address, CustomUser
+from .serializers import (AddressSerializer, UserRegistrationSerializer, UserLoginSerializer, CustomUserSerializer, ChangePasswordSerializer)
 from .renderers import UserLoginJSONRenderer
 
 class AddressList(generics.ListCreateAPIView):
@@ -45,3 +47,23 @@ class UserLogoutAPIView(APIView):
         except Exception as e:
             return Response(status=status.HTTP_400_BAD_REQUEST)
 
+class ChangePasswordAPIView(APIView):
+    serializer_class = ChangePasswordSerializer
+
+    def get_object(self, queryset=None):
+        return self.request.user
+
+    def put(self, request, *args, **kwargs):
+        access=request.META.get('HTTP_AUTHORIZATION')
+        decoded_access = jwt.decode(access, settings.SECRET_KEY, algorithms=["HS256"])
+        self.user = CustomUser.objects.get(user_id=decoded_access['user_id'])
+        serializer = ChangePasswordSerializer(data=request.data)
+        if serializer.is_valid():
+            old_password = serializer.data.get('old_password')
+            if not self.user.check_password(old_password):
+                return Response(data={"message": "That is not the correct password"}, status=status.HTTP_400_BAD_REQUEST)
+            self.user.set_password(serializer.data.get("new_password"))
+            self.user.save()
+            return Response(status=status.HTTP_204_NO_CONTENT)
+        return Response(data={"message": "Failed to change password"}, status=status.HTTP_400_BAD_REQUEST)
+        

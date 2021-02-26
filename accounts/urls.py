@@ -11,5 +11,6 @@ urlpatterns = [
     path('addresses/<uuid:pk>/', views.AddressDetail.as_view(), name='address'),
     path('users/', views.UserRegistrationAPIView.as_view(), name='registration'),
     path('users/login/', views.UserLoginAPIView.as_view(), name='login'),
-    path('users/logout/', views.UserLogoutAPIView.as_view(), name='logout')
+    path('users/logout/', views.UserLogoutAPIView.as_view(), name='logout'),
+    path('users/change-password/', views.ChangePasswordAPIView.as_view(), name='change_password')
 ]
