@@ -40,12 +40,9 @@ class UserRegistrationTestClass(TestCase):
     
     def test_post_response_email(self):
         self.assertEqual(self.response.data['email'], self.userobject['email'])
-    
-    def test_post_response_password(self):
-        self.assertNotEqual(self.response.data['password'], self.userobject['password'])
 
     def test_post_response_no_password(self):
-        self.assertNotContains(self.response.data, 'password')
+        self.assertNotContains(self.response, 'password')
 
     def test_user_created(self):
         user = CustomUser.objects.get(email=self.email)

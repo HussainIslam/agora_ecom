@@ -14,7 +14,9 @@ class CustomUserSerializer(serializers.ModelSerializer):
                     'last_modified', 'is_active', 'is_staff']
 
 class UserRegistrationSerializer(serializers.ModelSerializer):
-
+    email = serializers.CharField(max_length=255)
+    password = serializers.CharField(max_length=64, write_only=True)
+    
     class Meta:
         model = CustomUser
         fields = [ 'email', 'password' ]
